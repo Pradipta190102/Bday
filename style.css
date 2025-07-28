@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css?family=Nobile:400italic,700italic");
+
+html,body{
+  overflow: hidden;
+  background-image: url('./images/istockphoto-905483648-612x612.jpg');
+  width: 100%;
+  height: 100%;
+}
+.card{
+  position: relative;
+  width: 300px;
+  height: 425px;
+  border: 10px solid palevioletred;
+  margin: 150px auto 0 auto;
+  box-shadow: inset 10px 0px 15px 0px rgba(0,0,0,0.1);
+  background-color: white;
+}
+.card .container{
+  width: 80%;
+  height: 80%;
+  margin: auto;
+}
+.strikethrough{
+  text-decoration: line-through;
+}
+.card .container #head{
+  font-family: 'Nobile', sans-serif;
+  font-size: 1em;
+  margin: 15px auto 10px auto;
+  color:#f76b8a;
+  font-weight: 700;
+}
+#person-img
+{
+  width:200px
+
+}
+#anuska{
+
+  display: flex;
+  justify-content: center;
+  margin: 15px auto 0px auto;
+
+}
+#hhh{
+         color:#f76b8a !important;
+         font-weight: 700 !important;
+         font-size: 1em !important;
+
+}
+
+
+.card p{
+  font-size: 0.9em;
+  line-height: 1.5;
+  font-family: 'Nobile';
+  color: #66bfbf;
+  font-weight: 500;
+  font-style: italic;
+  text-align: center;
+  margin: 15px auto 0px auto;
+}
+.card .front{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  margin: -10px 0px 0px -10px;
+  border: 10px solid palevioletred;
+  backface-visibility: hidden;
+  background-color: white;
+  transform-style: preserve-3d;
+  transform-origin: 0% 50%;
+  transform: perspective(800px) rotateY(0deg);
+  transition: all .8s ease-in-out;
+}
+.card:hover .front{
+  transform: perspective(800px) rotateY(-170deg);
+  background-color: white;
+}
+.card .front img, .card .back img{
+  width: 270px;
+}
+.card .back{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  margin: -10px 0px 0px -10px;
+  border: 10px solid palevioletred;
+  backface-visibility: visible;
+  filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.5));
+  transform-style: preserve-3d;
+  transform-origin: 0% 50%;
+  transition: all 0.8s ease-in-out;
+  background-color: white;
+  box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.1);
+}
+.card:hover .back{
+  transform: perspective(800px) rotateY(-170deg);
+  box-shadow: 7px 0px 5px 0px rgba(0,0,0,0.3),
+              inset 2px 0px 15px 0px rgba(0,0,0,0.1);
+  background-color: white;
+}
